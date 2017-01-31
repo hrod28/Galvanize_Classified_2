@@ -13,7 +13,11 @@
 
         model.$onInit = function(){
           console.log('display line15');
-        }
+          $http.get('/classifieds')
+            .then((result)=>{
+              model.posts = result.data;
+            });
+        };
       }
 
 }());
