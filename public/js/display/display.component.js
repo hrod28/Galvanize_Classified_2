@@ -39,6 +39,13 @@
             model.displayingAd = false;
           }
         };
+
+        model.deleteAd = function(id){
+          $http.delete(`/classifieds/${id}`)
+            .then((result)=>{
+              $onInit();
+          });
+        };
       }
 
 }());
