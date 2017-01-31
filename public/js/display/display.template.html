@@ -1,3 +1,10 @@
+<div ng-repeat="post in model.posts">
+  <div class="row">
+    <div>{{post.title}}</div>
+  </div>
+</div>
+
+
 <div ng-show="model.displayingAd">
 
   <!-- <h1>{{post.title}}</h1>
@@ -5,7 +12,7 @@
   <h2>{{post.desctiption}}</h2>
   <img ng-src="{{post.item_image}}" alt="item-image"> -->
 
-<form action="index.html" method = "post">
+<form action="index.html" method ="post">
   <div>
     <label for="title">Title</label>
   </div>
@@ -13,25 +20,25 @@
     <input type="text" placeholder="title" ng-model="model.newAd.title">
   </div>
   <div>
-    <label for="title">Description</label>
+    <label for="description">Description</label>
   </div>
   <div>
-    <input type="text" placeholder="title" ng-model="model.newAd.description">
+    <input type="text" placeholder="description" ng-model="model.newAd.description">
   </div>
   <div>
-    <label for="title">Price</label>
+    <label for="price">Price</label>
   </div>
   <div>
-    <input type="text" placeholder="title" ng-model="model.newAd.price">
+    <input type="numeric" placeholder="price" ng-model="model.newAd.price">
   </div>
   <div>
-    <label for="title">Item Image</label>
+    <label for="item_image">Item Image</label>
   </div>
   <div>
-    <input type="text" placeholder="title" ng-model="model.newAd.item_image">
+    <input type="text" placeholder="image_url" ng-model="model.newAd.item_image">
   </div>
   <div>
-    <button type="button" ng-click="model.addPost()">Submit New Add</button>
+    <button type="button" ng-click="model.newAdd()">Submit New Add</button>
   </div>
 </form>
 
