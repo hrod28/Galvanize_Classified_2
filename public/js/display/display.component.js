@@ -13,7 +13,7 @@
       function controller($http, $state){
 
         const model = this;
-        model.displayingAd = true;
+        model.displayingAd = false;
         model.newAd = {};
 
         model.$onInit = function(){
@@ -29,6 +29,15 @@
             .then((result)=>{
 
           });
+        };
+
+        model.addForm = function(){
+          if (model.displayingAd) {
+            model.displayingAd = true;
+          }
+          else {
+            model.displayingAd = false;
+          }
         };
       }
 
