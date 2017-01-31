@@ -5,6 +5,34 @@
   <h2>{{post.desctiption}}</h2>
   <img ng-src="{{post.item_image}}" alt="item-image"> -->
 
-  
+<form action="index.html" method = "post">
+  <div>
+    <label for="title">Title</label>
+  </div>
+  <div>
+    <input type="text" placeholder="title" ng-model="model.newAd.title">
+  </div>
+  <div>
+    <label for="title">Description</label>
+  </div>
+  <div>
+    <input type="text" placeholder="title" ng-model="model.newAd.description">
+  </div>
+  <div>
+    <label for="title">Price</label>
+  </div>
+  <div>
+    <input type="text" placeholder="title" ng-model="model.newAd.price">
+  </div>
+  <div>
+    <label for="title">Item Image</label>
+  </div>
+  <div>
+    <input type="text" placeholder="title" ng-model="model.newAd.item_image">
+  </div>
+  <div>
+    <button type="button" ng-click="model.addPost()">Submit New Add</button>
+  </div>
+</form>
 
 </div>
