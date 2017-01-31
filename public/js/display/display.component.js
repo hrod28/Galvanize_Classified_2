@@ -8,7 +8,10 @@
         controller: controller
       });
 
-      function controller(){
+      controller.$inject = ['$http', '$state']
+
+      function controller($http, $state){
+
         const model = this;
 
         model.$onInit = function(){
