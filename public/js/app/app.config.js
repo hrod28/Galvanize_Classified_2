@@ -20,5 +20,11 @@
             component: 'display',
             url: '/',
           })
+          .state({
+            name: 'patchAd',
+            parent: 'app',
+            url: '/patch-ad',
+            component: 'patchAd',
+          });
       }
 }());

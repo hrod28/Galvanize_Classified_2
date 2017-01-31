@@ -1,7 +1,13 @@
 <div ng-repeat="post in model.posts">
   <div class="row">
     <div>{{post.title}}</div>
+    <div>{{post.price}}</div>
+    <div>{{post.description}}</div>
+    <div>
+      <img ng-src="{{post.item_image}}" alt="item-image">
+    </div>
   </div>
+  <button type="button" name="edit_ad" ng-click="model.toggleEdit()">Edit Post</button>
 </div>
 
 

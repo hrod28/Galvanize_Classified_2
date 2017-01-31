@@ -8,9 +8,9 @@
         controller: controller
       });
 
-      controller.$inject = ['$http', '$state']
+      controller.$inject = ['$http', '$state', '$stateParams']
 
-      function controller($http, $state){
+      function controller($http, $state, $stateParams){
 
         const model = this;
         model.displayingAd = false;
@@ -38,6 +38,10 @@
           else {
             model.displayingAd = false;
           }
+        };
+
+        model.newAd = function(){
+          $state.go('newAd');
         };
 
         model.deleteAd = function(id){
