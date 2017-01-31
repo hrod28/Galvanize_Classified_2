@@ -13,7 +13,7 @@
       function controller($http, $state){
 
         const model = this;
-        model.displaying = true;
+        model.displayingAd = true;
         model.newAd = {};
 
         model.$onInit = function(){
@@ -27,7 +27,7 @@
         model.addClassified = function(){
           $http.post('/classifieds', model.newAd)
             .then((result)=>{
-              
+
           });
         };
       }
