@@ -1,0 +1,32 @@
+<form action="index.html" method ="post">
+  <div>
+    <label for="title">Title</label>
+  </div>
+  <div>
+    <input type="text" placeholder="title" ng-model="model.newAd.title">
+  </div>
+  <div>
+    <label for="description">Description</label>
+  </div>
+  <div>
+    <input type="text" placeholder="description" ng-model="model.newAd.description">
+  </div>
+  <div>
+    <label for="price">Price</label>
+  </div>
+  <div>
+    <input type="numeric" placeholder="price" ng-model="model.newAd.price">
+  </div>
+  <div>
+    <label for="item_image">Item Image</label>
+  </div>
+  <div>
+    <input type="text" placeholder="image_url" ng-model="model.newAd.item_image">
+  </div>
+</form>
+<div>
+  <button type="button" ng-click="model.updateAdd()">Update your Ad</button>
+</div>
+<div>
+  <button type="button" ng-click="model.newAdd()">Submit New Add</button>
+</div>
