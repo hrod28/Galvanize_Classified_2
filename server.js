@@ -17,8 +17,8 @@ app.use('/angular-ui-router', express.static('node_modules/angular-ui-router/rel
 
 const port = process.env.PORT || 3000;
 
-// app.listen(port, () => {
-//   console.log('Listening on port', port);
-// });
+app.listen(port, () => {
+  console.log('Listening on port', port);
+});
 
 module.exports = app;

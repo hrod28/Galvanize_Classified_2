@@ -13,6 +13,8 @@
       function controller($http, $state){
 
         const model = this;
+        model.displaying = true;
+        model.newAd = {};
 
         model.$onInit = function(){
           console.log('display line15');
@@ -20,6 +22,13 @@
             .then((result)=>{
               model.posts = result.data;
             });
+        };
+
+        model.addClassified = function(){
+          $http.post('/classifieds', model.newAd)
+            .then((result)=>{
+              
+          });
         };
       }
 
