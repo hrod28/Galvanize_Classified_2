@@ -27,7 +27,7 @@
         model.addClassified = function(){
           $http.post('/classifieds', model.newAd)
             .then((result)=>{
-
+              $onInit();
           });
         };
 
