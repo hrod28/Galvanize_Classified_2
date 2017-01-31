@@ -9,11 +9,13 @@
   },
   "keywords": [],
   "author": "",
-  "description": "",
+  "description": "## Read the entire README before beginning. Commit often.",
   "dependencies": {
+    "angular": "^1.6.1",
     "body-parser": "^1.15.2",
     "cookie-parser": "^1.4.3",
     "express": "^4.14.0",
+    "jquery": "^3.1.1",
     "knex": "^0.12.6",
     "pg": "^6.1.0"
   },
@@ -21,5 +23,13 @@
     "chai": "^3.5.0",
     "mocha": "^3.2.0",
     "supertest": "^2.0.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hrod28/Galvanize_Classified_2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hrod28/Galvanize_Classified_2/issues"
+  },
+  "homepage": "https://github.com/hrod28/Galvanize_Classified_2#readme"
 }
