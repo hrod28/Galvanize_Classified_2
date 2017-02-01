@@ -1,5 +1,6 @@
-'use strict';
 (function() {
+  "use strict";
+
   angular.module('app')
     .component('display', {
       templateUrl: 'js/display/display.template.html',
@@ -23,11 +24,14 @@
         $http.delete(`/classifieds/${id}`)
           .then((result) => {
           console.log(result);
-          $onInit();
+          $http.get('/classifieds')
+            .then((result)=>{
+              model.posts = result.data;
+            });
         });
       };
 
-      model.patchAd = function(myPost) {
+      model.updateAd = function(myPost) {
         $state.go("patchAd", {newPost:myPost});
       }
 

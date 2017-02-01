@@ -1,13 +1,27 @@
-<button type="button" ng-click="model.newPost()">Post New Ad</button>
-<div ng-repeat="post in model.posts">
+<div class="row">
+  <button type="button" name="button" ng-click="model.newPost()">New Post</button>
+</div>
+
+<div class="row">
+  <input name="search" ng-model="searchText" type="search" placeholder="search by keyword">
+</div>
+
+<div class="row">
+  <button type="button" name="button" ng-click="model.updateSort('-date')">Sort By Date</button>
+  <button type="button" name="button" ng-click="model.updateSort('price')">Sort By Price</button>
+</div>
+
+<div ng-repeat="post in model.posts | filter : searchText | orderBy: model.sortCriteria">
   <div class="row">
     <h1>{{post.title}}</h1>
-    <h4>Price: {{post.price}}</h4>
-    <h5>Description:</h5>
+    <p>Price: {{post.price}}</p>
+    <p>Description:</p>
     <p>{{post.description}}</p>
     <img ng-src="{{post.item_image}}" alt="item-image">
   </div>
   <button type="button" name="delete_post" ng-click="model.deleteAd(post.id)">Delete Ad</button>
-  <button type="button" name="edit_post" ng-click="model.updateAd(post)">Update Ad</button>
-  <hr>
+  <button type="button" name="update_ad" ng-click="model.updateAd(post)">Update Ad</button>
 </div>
+
+<button type="button" name="delete_post" ng-click="model.deleteAd(post.id)">Delete Ad</button>
+<button type="button" ng-click="model.newPost()">Post New Ad</button>

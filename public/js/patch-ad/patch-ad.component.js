@@ -15,9 +15,8 @@
       };
 
       model.updateAd = function() {
-        console.log(model.newPost.id);
-        $http.patch(`/classifieds/${model.newPost.id}`, model.newPost).then((result) => {
-          console.log(result);
+        $http.patch(`/classifieds/${model.newPost.id}`, model.newPost)
+          .then((result) => {
           $state.go("display");
         })
       };
