@@ -3,8 +3,8 @@
 
     angular.module("app")
       .component('app', {
-        templateUrl: 'js/app/app/template.html',
-        contollerAs: 'model'
+        templateUrl: 'js/app/app.template.html',
+        contollerAs: 'model',
         controller: controller
       });
 

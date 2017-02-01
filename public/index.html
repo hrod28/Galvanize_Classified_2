@@ -1,30 +1,25 @@
-<!DOCTYPE html>
-<html ng-app="app">
-  <head>
-    <base href='/'>
-    <meta charset="utf-8">
-    <title>angular assessment</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <script src="bootstrap/bootstrap.min.js"></script>
-  </head>
 
-  <body>
-    <h1>{{2+2}}</h1>
-    <h1>yay!</h1>
-    <display></display>
-    <ui-view></ui-view>
+    <html ng-app="app">
+      <head>
+        <base href="/">
+        <meta charset="utf-8">
+        <title>Angular Assessment</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+      </head>
 
-    <!-- scripts -->
-    <script src="jquery/jquery.min.js"></script>
-    <script src="angular/angular.js"></script>
-    <script src="angular-ui-router/angular-ui-router.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-moment/1.0.1/angular-moment.js"></script>
-    <script src="js/app/app.module.js"></script>
-    <script src="js/app/app.config.js"></script>
-    <script src="js/app/app.component.js"></script>
-    <script src="js/display/display.component.js"></script>
-    <script src="js/patch/patch-ad.component.js"></script>
+      <body>
 
-  </body>
-</html>
+        <ui-view></ui-view>
+
+        <script src="jquery/jquery.min.js"></script>
+        <script src="angular/angular.js"></script>
+        <script src="angular-ui-router/angular-ui-router.js"></script>
+        <script src="bootstrap/bootstrap.min.js"></script>
+        <script src="js/app/app.module.js"></script>
+        <script src="js/app/app.config.js"></script>
+        <script src="js/app/app.component.js"></script>
+        <script src="js/display/display.component.js"></script>
+        <script src="js/patch-ad/patch-ad.component.js"></script>
+        <script src="js/new-post/new-post.component.js"></script>
+      </body>
+    </html>
