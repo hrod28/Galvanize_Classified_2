@@ -2,7 +2,7 @@
 (function() {
   angular.module('app')
     .component('updateAd', {
-      templateUrl: 'js/patch/patch-ad.template.html',
+      templateUrl: 'js/patch-ad/patch-ad.template.html',
       conrollerAs: 'model',
       controller: controller
     });
@@ -11,8 +11,8 @@
     function controller($http, $state, $stateParams) {
       const model = this;
       model.newPost = $stateParams.newPost;
-      model.$onInit = function() {
-      };
+      // model.$onInit = function() {
+      // };
 
       model.updateAd = function() {
         $http.patch(`/classifieds/${model.newPost.id}`, model.newPost)

@@ -29,7 +29,7 @@
           name: "patchAd",
           parent: "app",
           url: "/patch-ad",
-          component: "patchAd",
+          component: "updateAd",
           params: {
             newPost: {}
           }

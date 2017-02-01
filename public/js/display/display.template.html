@@ -1,6 +1,3 @@
-<div class="row">
-  <button type="button" name="button" ng-click="model.newPost()">New Post</button>
-</div>
 
 <div class="row">
   <input name="search" ng-model="searchText" type="search" placeholder="search by keyword">
@@ -19,9 +16,12 @@
     <p>{{post.description}}</p>
     <img ng-src="{{post.item_image}}" alt="item-image">
   </div>
-  <button type="button" name="delete_post" ng-click="model.deleteAd(post.id)">Delete Ad</button>
-  <button type="button" name="update_ad" ng-click="model.updateAd(post)">Update Ad</button>
-</div>
+  <div>
+    <button type="button" name="delete_post" ng-click="model.deleteAd(post.id)">Delete Ad</button>
+  </div>
+  <div>
+    <button type="button" name="button" ng-click="model.newPost()">Post New Ad</button>
+    <button type="button" name="update_ad" ng-click="model.updateAd(post)">Update Ad</button>
+  </div>
 
-<button type="button" name="delete_post" ng-click="model.deleteAd(post.id)">Delete Ad</button>
-<button type="button" ng-click="model.newPost()">Post New Ad</button>
+</div>
