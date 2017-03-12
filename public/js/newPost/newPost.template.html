@@ -1,4 +1,14 @@
- <h3>New Post</h3>
+<h1> Classifieds: </h1>
+
+<section ng-repeat = "newPost in model.classifieds">
+  <h3>Title: {{newPost.title}} </h3>
+  <a ui-sref = "updatePost({id: post.id})">{{newPost.description}}</a>
+  <p>Price: {{newPost.price | currency}}</p>
+  <img ng-src ="{{newPost.item_image}}">
+  <br>
+</section>
+
+ <h3>New Post Form:</h3>
  <div class="row">
    <section>
    <form class="" action="index.html" method="post">
@@ -27,6 +37,10 @@
        <button type="button" name="button" ng-click="model.addNewPost()">Submit Post</button>
      </div>
    </form>
+ </section>
 
  </div>
-<h1>hi</h1>
+
+
+
+<h1>hi {{2+2}}</h1>

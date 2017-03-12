@@ -1,6 +1,6 @@
 (function() {
   "use strict";
-  
+
   angular.module('updatePost.component', ['ui.router'])
     .component('updatePost', {
       templateUrl: 'js/updatePost/updatePost.template.html',
@@ -8,24 +8,24 @@
       controller: controller
     });
 
-    controller.$inject = ["$http", "$state", "$stateParams", "$state", "$location"];
+    controller.$inject = ["$http", "$state", "$stateParams", "$location"];
 
     function controller($http, $state, $stateParams) {
-      const model = this;
+      const vm = this;
 
-      model.$onInit = onInit;
-      model.updatePost = updatePost;
-      model.deletePost = deletePost;
+      vm.$onInit = onInit;
+      vm.updatePost = updatePost;
+      // vm.deletePost = deletePost;
 
     function onInit(){
       $http.get(`/api/classifieds/${stateParams.id}`)
         .then(results => {
-          model.post = results.data;
+          vm.post = results.data;
         });
     }
 
     function updatePost(){
-      $http.patch (`/api/classifieds/${stateParams.id}`, model.post);
+      $http.patch (`/api/classifieds/${stateParams.id}`, vm.post);
     }
 
     }
