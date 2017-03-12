@@ -1,22 +1,26 @@
 "use strict";
 (function() {
-  angular.module('app')
+  angular.module('newPost.component', ['ui.router'])
     .component('newPost', {
-      templateUrl: 'js/new-post/new-post.template.html',
+      templateUrl: 'js/newPost/newPost.template.html',
       constrollerAs: 'model',
       controller: controller
     });
 
-    controller.$inject = ["$http", "$state", "$stateParams"];
-    function controller($http, $state, $stateParams) {
+    controller.$inject = ['$http'];
+
+    function controller($http) {
       const model = this;
 
-      model.addPost = function() {
-        $http.post('/classifieds', model.newPost)
-          .then((result) => {
-          console.log(result);
-          $state.go("display");
-        });
-      };
+      model.$onInit = onInit;
+
+      function onInit(){
+        $http.get('/api/classifieds')
+          .then(results => {
+            model.classifieds = results.data;
+          });
+      }
     }
+
+
 }());
