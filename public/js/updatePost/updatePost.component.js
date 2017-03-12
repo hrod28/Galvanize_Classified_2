@@ -1,5 +1,6 @@
-"use strict";
 (function() {
+  "use strict";
+  
   angular.module('updatePost.component', ['ui.router'])
     .component('updatePost', {
       templateUrl: 'js/updatePost/updatePost.template.html',

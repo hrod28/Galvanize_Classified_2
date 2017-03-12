@@ -1,5 +1,5 @@
 // Update with your config settings.
-
+'use strict';
 module.exports = {
 
   development: {
@@ -11,6 +11,9 @@ module.exports = {
     connection: "postgres://localhost/classified_test"
   },
 
-  production: { },
+  production: {
+    client: 'pg',
+    connection: process.env.DATABASE_URL
+  },
 
 };

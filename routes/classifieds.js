@@ -7,13 +7,15 @@ const router = express.Router();
 
 router.get('/', (req, res, next) => {
   knex('classifieds')
+  
     .select('id', 'title', 'description', 'price', 'item_image')
-    .orderBy('id', 'asc')
+    // .orderBy('id', 'asc')
     .then((results)=>{
-      res.json(results);
+      // res.json(results);
+      res.send(results);
     })
     .catch((err)=>{
-      res.send(err)
+      next(err)
     });
 });
 
