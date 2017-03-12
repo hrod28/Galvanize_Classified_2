@@ -1,8 +1,8 @@
 <h1> Classifieds: </h1>
 
-<section ng-repeat = "newPost in model.classifieds">
+<section ng-repeat = "newPost in model.classifieds | filter:model.searchByTitle | filter:model.searchByDesc | orderBy:model.sort">
   <h3>Title: {{newPost.title}} </h3>
-  <a ui-sref = "updatePost({id: post.id})">{{newPost.description}}</a>
+  <a ui-sref = "updatePost({id: newPost.id})">{{newPost.description}}</a>
   <p>Price: {{newPost.price | currency}}</p>
   <img ng-src ="{{newPost.item_image}}">
   <br>
@@ -30,7 +30,7 @@
 
      <div>
        <label for="item_image">Item Image</label>
-       <input type="text" name="item_image" value="" ng-model="model.newPost.item_image">
+       <input type="text" name="item_image" ng-model="model.newPost.item_image">
      </div>
 
     <div>

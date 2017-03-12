@@ -16,6 +16,7 @@
       vm.$onInit = onInit;
       vm.addNewPost = addNewPost;
       vm.classifieds = [];
+      vm.forSorting = forSorting;
 
 
       function onInit(){
@@ -38,6 +39,10 @@
             vm.classifieds.push(post);
             delete vm.post;
           });
+      }
+
+      function forSorting(propertyName){
+        vm.sort = propertyName;
       }
     }
 
