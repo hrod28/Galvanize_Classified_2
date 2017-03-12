@@ -1,10 +1,13 @@
 {
   "name": "galvanize-classified-ad",
   "version": "1.0.0",
+  "engines": {
+    "node": "7.1.0"
+  },
   "main": "server.js",
   "license": "MIT",
   "scripts": {
-    "start": "node server.js",
+    "start": "nodemon server.js",
     "test": "mocha"
   },
   "keywords": [],
@@ -20,6 +23,8 @@
     "express": "^4.14.0",
     "jquery": "^3.1.1",
     "knex": "^0.12.6",
+    "lite-server": "^2.2.2",
+    "nodemon": "^1.11.0",
     "pg": "^6.1.0"
   },
   "devDependencies": {

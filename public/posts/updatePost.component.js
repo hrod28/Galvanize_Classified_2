@@ -8,7 +8,7 @@
       controller: controller
     });
 
-    controller.$inject = ["$http", "$state", "$stateParams", "$location"];
+    controller.$inject = ["$http", "$state", "$stateParams", "$state", "$location"];
 
     function controller($http, $state, $stateParams) {
       const vm = this;
