@@ -14,7 +14,7 @@ router.get('/', (req, res, next) => {
     })
     .catch((err)=>{
       res.send(err)
-    })
+    });
 });
 
 router.get('/:id', (req, res, next)=>{
@@ -26,7 +26,7 @@ router.get('/:id', (req, res, next)=>{
     })
     .catch((err)=>{
       res.send(err)
-    })
+    });
 });
 
 router.post('/', (req, res, next) => {
@@ -43,8 +43,8 @@ router.post('/', (req, res, next) => {
     })
     .catch((err)=>{
       res.send(err)
-    })
-})
+    });
+});
 
 router.patch('/:id', (req, res, next)=>{
   knex('classifieds')
@@ -60,8 +60,8 @@ router.patch('/:id', (req, res, next)=>{
     })
     .catch((err)=>{
       res.send(err)
-    })
-})
+    });
+});
 
 router.delete('/:id', (req, res, next) =>{
   knex('classifieds')
@@ -73,7 +73,7 @@ router.delete('/:id', (req, res, next) =>{
     })
     .catch((err)=>{
       res.send(err)
-    })
+    });
 });
 
 module.exports = router;
