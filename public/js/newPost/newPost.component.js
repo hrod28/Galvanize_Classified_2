@@ -5,17 +5,18 @@
     .component('newPost', {
       templateUrl: 'js/newPost/newPost.template.html',
       constrollerAs: 'model',
-      controller: controller
+      controller: Controller
     });
 
-    controller.$inject = ['$http'];
+    Controller.$inject = ['$http'];
 
-    function controller($http) {
+    function Controller($http) {
       const vm = this;
 
       vm.$onInit = onInit;
       vm.addNewPost = addNewPost;
       vm.classifieds = [];
+
 
       function onInit(){
         $http.get('/api/classifieds')

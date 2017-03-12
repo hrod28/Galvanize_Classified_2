@@ -5,7 +5,6 @@ const router = express.Router();
 const knex = require('../knex');
 
 router.get ('/' , (req, res, next) => {
-
   knex('classifieds')
     .select ('id', 'title' , 'description' , 'price' , 'item_image')
   .then((results) => {
@@ -17,6 +16,7 @@ router.get ('/' , (req, res, next) => {
 });
 
 router.get('/:id' , (req, res, next) => {
+
   const id = req.params.id;
 
   knex('classifieds')
@@ -32,6 +32,7 @@ router.get('/:id' , (req, res, next) => {
 });
 
 router.post('/' , (req, res, next) => {
+
   const title = req.body.title;
   const description = req.body.description;
   const price = req.body.price;
@@ -50,12 +51,12 @@ router.post('/' , (req, res, next) => {
 });
 
 router.patch('/:id' , (req, res, next) => {
+
   const id = req.params.id;
   const title = req.body.title;
   const description = req.body.description;
   const price = req.body.price;
   const item_image = req.body.item_image;
-
 
   knex('classifieds')
     .update({title, description, price, item_image})
